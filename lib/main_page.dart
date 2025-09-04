@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
         icon: "assets/images/rice-bowl.png",
         pageInfo: PageInfo(
             nextPage: EggHomePage(eggOptions: {
-          "White Rice ": {"time": 18 * 60, "color": Colors.pink[100], "assets": "assets/images/soft-boiled-egg.png"},
+          "White Rice ": {"time": 18 * 60, "color": Colors.pink[100], "assets": "assets/images/rice-bowl.png"},
           "Brown Rice": {"time": 45 * 60, "color": Colors.orange[100], "assets": "assets/images/egg.png"},
           "Jasmine Rice": {"time": 15 * 60, "color": Colors.brown[100], "assets": "assets/images/hard-boiled-egg.png"},
           "Basmati Rice": {"time": 20 * 60, "color": Colors.brown[100], "assets": "assets/images/hard-boiled-egg.png"},
