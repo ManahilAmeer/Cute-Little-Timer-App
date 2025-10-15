@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:itsy_timer/main_page.dart';
 import 'package:lottie/lottie.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'timer_home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -39,7 +38,6 @@ class _EggTimerHomeState extends State<EggTimerHome>
   int _selectedTime = 0; // seconds
   int _remaining = 0;
   Timer? _timer;
-  bool _finished = false;
 
   late AnimationController _wiggleController;
   final player = AudioPlayer();
@@ -74,7 +72,6 @@ class _EggTimerHomeState extends State<EggTimerHome>
     if (_selectedTime == 0) return;
     setState(() {
       _remaining = _selectedTime;
-      _finished = false;
     });
 
     _timer?.cancel();
@@ -84,7 +81,6 @@ class _EggTimerHomeState extends State<EggTimerHome>
           _remaining--;
         } else {
           timer.cancel();
-          _finished = true;
           _showCrackAnimation();
           _playSound();
         }

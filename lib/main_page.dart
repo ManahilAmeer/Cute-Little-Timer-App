@@ -30,21 +30,25 @@ class HomeScreen extends StatelessWidget {
         subtitle: "Perfect fluffy rice every time",
         icon: "assets/images/rice-bowl.png",
         pageInfo: PageInfo(
-            nextPage: EggHomePage(eggOptions: {
-          "White Rice ": {"time": 18 * 60, "color": Colors.pink[100], "assets": "assets/images/soft-boiled-egg.png"},
-          "Brown Rice": {"time": 45 * 60, "color": Colors.orange[100], "assets": "assets/images/egg.png"},
-          "Jasmine Rice": {"time": 15 * 60, "color": Colors.brown[100], "assets": "assets/images/hard-boiled-egg.png"},
-          "Basmati Rice": {"time": 20 * 60, "color": Colors.brown[100], "assets": "assets/images/hard-boiled-egg.png"},
+            nextPage: EggHomePage(
+                animationAsset : "assets/animations/egg_crack.json",
+                eggOptions: {
+          "White Rice ": {"time": 18 * 60, "color": Colors.pink[100], "assets": "assets/images/rice-bowl.png"},
+          "Brown Rice": {"time": 45 * 60, "color": Colors.orange[100], "assets": "assets/images/brown-rice.png"},
+          "Jasmine Rice": {"time": 15 * 60, "color": Colors.brown[100], "assets": "assets/images/jasmine-flower.png"},
+          "Basmati Rice": {"time": 20 * 60, "color": Colors.brown[100], "assets": "assets/images/basmati-rice.png"},
         }))),
     MenuItem(
         title: "Laundry",
         subtitle: "Washing and drying clothes",
         icon: "assets/images/shirt.png",
         pageInfo: PageInfo(
-            nextPage: EggHomePage(eggOptions: {
-          "Quick Wash": {"time": .5 * 60, "color": Colors.pink.shade100, "assets": "assets/images/soft-boiled-egg.png"},
-          "Regular Wash": {"time": 17 * 60, "color": Colors.orange[100], "assets": "assets/images/egg.png"},
-          "Heavy Duty Wash": {"time": 30 * 60, "color": Colors.brown[100], "assets": "assets/images/hard-boiled-egg.png"},
+            nextPage: EggHomePage(
+                animationAsset : "assets/animations/egg_crack.json",
+                eggOptions: {
+          "Quick Wash": {"time": 5 * 60, "color": Colors.pink.shade100, "assets": "assets/images/quick-wash.png" },
+          "Regular Wash": {"time": 17 * 60, "color": Colors.orange[100], "assets": "assets/images/regular-wash.png"},
+          "Heavy Duty Wash": {"time": 30 * 60, "color": Colors.brown[100], "assets": "assets/images/heavy.png"},
           "Drying": {"time": 15 * 60, "color": Colors.brown[100], "assets": "assets/images/hard-boiled-egg.png"},
         })
         )),
@@ -54,6 +58,7 @@ class HomeScreen extends StatelessWidget {
         icon: "assets/images/boiling_egg.png",
         pageInfo: PageInfo(
             nextPage: EggHomePage(
+              animationAsset : "assets/animations/egg_crack.json",
           eggOptions: {
             "Soft 🥚": {"time": .25 * 60, "color": Colors.pink[100], "assets": "assets/images/soft-boiled-egg.png"},
             "Medium 🍳": {"time": 7 * 60, "color": Colors.orange[100], "assets": "assets/images/egg.png"},

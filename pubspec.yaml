@@ -66,7 +66,13 @@ flutter:
     - assets/images/egg.png
     - assets/images/boiling_egg.png
     - assets/images/shirt.png
+    - assets/images/heavy.png
+    - assets/images/quick-wash.png
+    - assets/images/regular-wash.png
+    - assets/images/jasmine-flower.png
     - assets/images/rice-bowl.png
+    - assets/images/basmati-rice.png
+    - assets/images/brown-rice.png
     - assets/images/soft-boiled-egg.png
     - assets/images/hard-boiled-egg.png
     - assets/animations/egg_crack.json
