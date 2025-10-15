@@ -9,11 +9,14 @@ class EggTimerPage extends StatefulWidget {
   final String label;
   final String imageAsset;
 
+  final animationAsset;
+
   const EggTimerPage({
     Key? key,
     required this.seconds,
     required this.label,
     required this.imageAsset,
+    required this.animationAsset
   }) : super(key: key);
 
   @override
@@ -24,6 +27,7 @@ class _EggTimerPageState extends State<EggTimerPage> with TickerProviderStateMix
   late int _remaining;
   Timer? _timer;
   bool _done = false;
+  final label = "Label";
   final _player = AudioPlayer();
 
   late AnimationController _boilController;
@@ -32,7 +36,6 @@ class _EggTimerPageState extends State<EggTimerPage> with TickerProviderStateMix
   void initState() {
     super.initState();
     _remaining = widget.seconds;
-
     // Timer countdown
     _timer = Timer.periodic(const Duration(seconds: 1), (t) {
       if (_remaining > 0) {
@@ -85,9 +88,10 @@ class _EggTimerPageState extends State<EggTimerPage> with TickerProviderStateMix
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Crack animation
-            Lottie.asset("assets/animations/egg_crack.json", width: 400),
+            Lottie.asset(widget.animationAsset, width: 400),
             const SizedBox(height: 30),
-            const Text("Your egg is ready! 🎉", style: TextStyle(fontSize: 30)),
+
+            Text('Your ${widget.label}  is ready! 🎉', style: const TextStyle(fontSize: 30)),
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () => Navigator.pop(context),
@@ -118,9 +122,9 @@ class _EggTimerPageState extends State<EggTimerPage> with TickerProviderStateMix
               ],
             ),
             const SizedBox(height: 20),
-            const Text(
-              "Your Egg will be ready in...",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            Text(
+              'Your ${widget.label} will be ready in...',
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
 
